@@ -5,6 +5,58 @@
    <!--Configurer la page-->
    <head>
 
+        <style>
+
+            ol{
+                background-color: dodgerblue;
+            }
+
+            ul{
+                background-color: crimson;
+                list-style-type: none;
+            }
+
+            table{
+                text-align:center;
+                width:50%;
+                border: dashed;
+                border-color: black;
+                border-collapse: collapse
+            }
+
+            td{
+                height: 30px;
+                width: 100px;
+                border: dashed;
+                border-color: black;
+            }
+
+            fieldset{
+                text-align: center;
+                background-image: url('https://scontent-iad3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/17076150_437432346595876_1930634421421998080_n.jpg');
+                background-size: 100% 100%;
+            }
+
+            legend{
+                text-align: left"
+            }
+
+            p{
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
+
+            .red{
+                color:wheat
+            }
+
+            #mint{
+                text-decoration: underline;
+            }
+
+
+       </style>
+
         <!--Faire en sorte d'afficher des accents-->
         <meta charset="UTF-8">
 
@@ -16,6 +68,8 @@
 
    <!--ajouter du contenu dans la page-->
     <body>
+        .
+
 
         <!--Les Titres-->
         <h1>Titre Principal</h1>    <!--la balise h1 doit être unique-->
@@ -32,9 +86,9 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <b>Delectus doloribus harum labore</b> alias unde id expedita repellat tempore, <i>nesciunt necessitatibus commodi</i> eligendi aperiam assumenda. Excepturi temporibus, quam animi reprehenderit esse?</p>
 
         <!--Liste ordonnées-->
-        <ol style="background-color: dodgerblue;">
+        <ol class="red">
 
-            <li>Pierre</li>
+            <li id="mint">Pierre</li>
             <li>Paul</li>
             <li>Jacques</li>
         
@@ -42,7 +96,7 @@
 
         <!--Liste Non Ordonnée-->
 
-        <ul style="background-color: crimson;list-style-type: none;">
+        <ul>
             <li>John</li>
             <li>Paul</li>
             <li>Georges</li>
@@ -53,14 +107,38 @@
         <img src="img/gumball_gumball_180x180.png" alt="Gumball">
         <img src="img/gumball_gumball_180x180.png" alt="Gumball">
 
+
+        <!--tableau-->
+
+        <table>
+           <tbody>
+                <tr >
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>Mike</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+           </tbody>        
+        </table>
+
+     
         <!--balise formulaire-->
 
         <form action="about.html" method="POST">
-           <fieldset style="text-align: center;background-image: url('https://scontent-iad3-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/17076150_437432346595876_1930634421421998080_n.jpg'); background-size: 100% 100%;">
-               <legend style="text-align: left">Mike</legend>
-                Nom: <p style="margin-top: 0px; margin-bottom: 0px "></p>
+           <fieldset>
+               <legend>Mike</legend>
+                Nom: <p></p>
                <input type="text" name="Nom" > <p></p>
-                Prénom: <p style="margin-top: 0px; margin-bottom: 0px"></p>
+                Prénom: <p></p>
                <input type="text" name="prénom"></p>
                <input type="submit" value="Envoyer">
            </fieldset>
