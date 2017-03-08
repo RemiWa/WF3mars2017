@@ -5,19 +5,9 @@
 
     <head>
         <meta charset="utf-8">
-        <title>8 Mars</title>
-
-        <!--Déclarer le style dnas la balise head-->
-
-        <style>
-
-        h2{
-            color: mediumspringgreen;
-        }
-
-        </style>
-
-    </head>
+        <title>Exo 4 - 8 Mars - Intégrer un fichier CSS</title>
+        <link rel="stylesheet" href="css\style.css">
+   </head>
     
     <body>
         <!--Ouverture de la page-->
@@ -30,11 +20,11 @@
             <nav>
 
                 <ul>
-                    <li><a href="#" style="color: crimson">Accueil</a></li>
-                    <li><a href="#" style="color: crimson">A propos</a></li>
-                    <li><a href="#" style="color: crimson">Portfolio</a></li>
-                    <li><a href="#" style="color: crimson">Contact</a></li>
-                    <li><a href="#" style="color: crimson">Profil Github</a></li>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Profil Github</a></li>
                 </ul>
 
             </nav>
@@ -47,9 +37,9 @@
             
             <!--Créeer une zone-->
 
-            <section>
+            <section class="redBackground">
 
-                <h2>à propos de Rémi Warin</h2>
+                <h2 id="bigTitle">A propos de <b>Rémi Warin</b></h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum possimus cum voluptatibus delectus quibusdam vitae excepturi consequatur cupiditate minima esse itaque neque, a dolores perspiciatis culpa ipsum. Voluptas, excepturi, ducimus.</p>
 
             </section>
@@ -58,14 +48,14 @@
 
             <section>
 
-                <h2>Portfolio de Rémi Warin</h2>
+                <h2 id="portfolioTitle">Portfolio de <b>Rémi Warin</b></h2>
                 <p>Cliquez sur un des projets ci-dessous</p>
             
                 <!--Créer une sous section-->
 
                 <article>
 
-                    <h3>Projet 1</h3>
+                    <h3 class="importantClass" id="important">Projet 1</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
                     <h3>Projet 2</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
@@ -79,8 +69,8 @@
 
             <section>
 
-                <h2>Contacter Rémi Warin</h2>
-                <p>Vous pouvez envoyer un email en cliquant sur cette adresse :  <a href="#">warin.remi@gmail.com</a></p>
+                <h2>Contacter <b>Rémi Warin</b></h2>
+                <p>Vous pouvez envoyer un email en cliquant sur cette adresse :  <a href="#">warin.remi@gmail.com </p>
 
             </section>
 
@@ -88,7 +78,7 @@
 
         <!--Fermeture de la page-->
 
-        <footer>
+        <footer class="redBackground">
             <p>Under MIT License</p>
         </footer>
 

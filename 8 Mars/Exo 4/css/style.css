@@ -1,0 +1,79 @@
+
+#important{
+    color: slategrey;
+}
+
+
+.importanClass{
+    color: green;
+}
+
+/*
+Selecteur logique: une balise html
+*/
+
+/*Faire en sorte que tous les textes de la page soient centrés*/
+
+    body{
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+/*supprimer les décorations de liste*/
+
+    li{
+        list-style: none;
+    }
+
+/*selectionner la balise H2*/
+
+    h2, h3{
+        /*changer la couleur de la font*/
+        color: black;
+    }
+/*selectionner les balises a*/
+
+    a{
+        text-decoration: none;
+        color: black;
+    }
+
+/*Selecteurs Imbriqués*/
+
+    h2 b{
+        color: slategrey;
+    }
+
+/*selecteur par classe*/
+
+    .redBackground{
+        background-color: crimson;
+    }
+
+    .redBackground h2,.redBackground h2 b{
+        color: #f8f8f8;
+    }
+
+/*Selecteurs par ID*/
+
+/*selectionner l'ID bigTitle*/
+
+    #bigTitle{
+        font-size: 3rem;
+    }
+
+    /*Selecteur d'intéractions*/
+
+        /*Changer la couleur des balises a au survol*/
+
+        a:hover{
+            color: crimson;
+        }
+
+        .redBackground:hover{
+            background-color: lightcoral;
+        }
+
+        #bigTitle:hover{
+            color:lightslategray;
+        }
