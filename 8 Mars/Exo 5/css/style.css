@@ -1,0 +1,63 @@
+/*
+style reset
+*/
+
+    /*Selectionner toues les balises du doc*/
+
+    *{
+        /* supprimer les marges interieures */
+        padding: 0;
+
+        /* supprimer les marges */
+        margin: 0;
+    }
+
+    /*  ramener la valeur de 1rem à 10px */
+    
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem; 
+    }
+    
+
+    /*  EM, REM  */
+
+    h1{
+        font-size: 3rem;
+    }
+
+    h1 b{
+        /* la taille de la font soit toujours plus petite que son parent direct */
+        font-size: .5em;
+    }
+
+    /* style header */
+
+    header{
+        /* ajouter une bordure en css */
+    border: .25rem solid darkslategrey;
+    padding: 2rem;
+        /*  ajouter une marge à l'exterieur de la balise */
+    
+        }
+
+/*  modifier le type de balise Li */
+
+    li{
+        display: inline-block;
+    }
+
+ 
+    /*limiter la largeur de main , header , footer, à 960px*/
+
+    header, main, footer{
+        max-width: 96rem;
+
+        /*centrer ne balise type block réduite en largeur*/
+
+        margin: 2rem auto;
+
+    }
