@@ -23,14 +23,14 @@ style reset
     }
     
 
-    /*  EM, REM  */
+ /*  EM, REM  */
 
     h1{
         font-size: 3rem;
     }
 
     h1 b{
-        /* la taille de la font soit toujours plus petite que son parent direct */
+     /* la taille de la font soit toujours plus petite que son parent direct */
         font-size: .5em;
     }
 
@@ -38,11 +38,11 @@ style reset
 
     header{
         /* ajouter une bordure en css */
-    border: .25rem solid darkslategrey;
-    padding: 2rem;
+         border: .25rem solid darkslategrey;
+         padding: 2rem;
         /*  ajouter une marge à l'exterieur de la balise */
     
-        }
+    }
 
 /*  modifier le type de balise Li */
 
@@ -50,10 +50,11 @@ style reset
         display: inline-block;
     }
 
- 
-    /*limiter la largeur de main , header , footer, à 960px*/
+
+/*limiter la largeur de main , header , footer, à 960px*/
 
     header, main, footer{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         max-width: 96rem;
 
         /*centrer ne balise type block réduite en largeur*/
@@ -61,3 +62,64 @@ style reset
         margin: 2rem auto;
 
     }
+
+    section{
+        margin-bottom: 4rem;
+    }
+
+/*Mise en forme typographique*/
+
+    .presentation{
+
+        /* Modifier la famille de fonts*/
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        /* modifier la taille de la font */
+        font-size:1.7rem;
+
+        /* modifier l'interlignage */
+        line-height: 2em;
+
+        /* modifier la graisse de la font */
+        font-weight: lighter;
+
+        /* Ajouter une ombre portée */
+        text-shadow: .5rem .5rem .5rem lightcoral;
+    
+        /* modifier la casse de la font*/
+        text-transform: none;
+    
+        /* Modifier le style de la font */
+        font-style: normal;
+    
+        /* modifier la décoration de la font */
+        text-decoration: underline;
+
+        padding: 2rem;
+        background-color: lightcoral;
+        margin: 4rem auto;
+        color: black;
+    }
+
+    
+
+
+/*Utilisation des couleurs*/
+
+    #portfolio{
+        background-color: lightgrey;
+        color:black;
+        /*agis sur le texte et les balises inline*/
+        text-align: center;
+    }
+
+    #portfolio article{
+        background-color: rgba(255, 255, 255, .5);
+
+        padding: 2rem;
+        margin: 1rem;
+    
+    /* faire en sorte de mettre les articles sur 3 colones */
+        display: inline-block;
+    }
+
