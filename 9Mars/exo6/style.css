@@ -1,6 +1,4 @@
-/*
-style reset
-*/
+/*style reset*/
 
             *{      
                 padding: 0;
@@ -29,38 +27,195 @@ style reset
             img{
                 max-width: 100%;
             }
+             h2{
+
+                 font-size: 3rem;
+                /* aligner le texte au centre */
+                text-align:center;
+                /* modifier la casse de la font */
+                text-transform: uppercase;
+                /* ajouter une marge exterieure en bas de 30 px*/
+                margin-bottom: 3rem;
+            }
+
+            h3{
+                font-size: 2.5rem;
+                text-transform: uppercase;
+                margin-bottom: 3rem;
+            }
+
+/*style header*/
+    header{
+        background-color: rgba(24,188,156,.9);
+        text-align: center;
+        color: white;
+
+        /*Ajouter une marge intérieure en bas de 60 px*/
+        padding-bottom: 6rem;
+    }
+
+    
+/*Style nav*/
+
+            nav{
+                background-color: #2C3E50;
+                text-transform: uppercase;
+                /*aligner le texte à gauche*/
+                text-align: left;
+                /* ajouter une marge intérieure (paffing) de 20 px ( 3rem)*/
+                padding: 3rem;
+
+                /* ajouter une marge exterieure bas ( margin) de 30px*/
+                margin-bottom: 6rem;
+                
+            }
+
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            nav li{
+                display: inline-block;
+            /* Ajouter unemarge à droite */
+                margin-right: 1rem;
+            }
+
+            h1{
+                /* passer le texte en majuscule */
+                text-transform: uppercase;
+                font-size: 5rem;
+                padding-top:3rem;
+                
+            }
+
+            header p{
+                font-size: 2.5rem;
+            }
+
+            section{
+        padding: 6rem 0;
+            }
 
 
 
+/*style portfolio*/
+
+    #portfolio {
+        /* Centre les images*/
+        text-align: center;
+    }
+
+    #portfolio a{
+        /*masquer les balises*/
+        display: none;
+    }
+
+    #portfolio article{
+
+        /*ajouter une marge exterieure de 10px*/
+        margin: 1rem;
+
+        /*afficher les images en 3 colonnes*/
+        display:inline-block;
+        width: 29%;
+
+    }
+
+/*style about*/
+
+    #about{
+
+        /*modifier la couleur des textes*/
+        color:white;
+
+        /*ajouter une couleur de fond*/
+        background-color: #18bc9c;
+        
+        /*centrer le texte*/
+        text-align: center;
+
+    }
+
+    #about p{
+        /*afficher le texte sur 2 colonnes*/
+        column-count: 2;
+
+        /*centre le texte*/
+        text-align: justify;
+
+        margin-bottom: 4rem;
+    }
+
+    #about a{
+
+        font-weight: lighter;
+        color: white;
+        
+        border: .3rem solid white;
+        /*créer un bord arrondi*/
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+    }
+
+/*style formulaire de contact*/
+    input, textarea{
+
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        display: block;
+        width: 90%;        
+
+        /*annuler le style du navigateur pour redefinir ensuite la bordure*/
+        border: none;
+        /*redefinir la bordure*/
+        border-bottom: .05rem  lightgrey solid;
+    }
+
+    textarea{
+        /*Définir une hauteur minimale*/
+        min-height: 20rem;
+    }
+
+    /*séléctionner une balise grace à l'attribut et sa valeur*/
+        [type="submit"]{
+            color: white;
+            width:10rem;
+            margin-left: 3rem;
+
+            display: inline-block;
+        
+            background: #18bc9c;
+           
+            border-radius: .5rem;
+            
+        }
 
 
+/* Style footer*/
 
+    footer{
+        color:white;
+        background-color: #2C3E50;
+        text-align: center;
+    }
 
+    footer article {
+        display: inline-block;
+        width: 29%;
+        
+        /*gérer l'alignement vertical*/
+        vertical-align: top;
+    }
 
+    [href="http://google.com"]{
+        color: #18bc9c;
+        
+    }
 
-header{
-    background-color: rgba(24,188,156,.9);
-    text-align: center;
-    color: white;
-}
-
-nav{
-    background-color: #2C3E50;
-    text-transform: uppercase;
-    /*aligner le texte à gauche*/
-    text-align: left;
-}
-
-nav a{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-
-}
-
-nav li{
-    display: inline-block;
-/* Ajouter unemarge à droite */
-    margin-right: 1rem;
-}
-
+    aside{
+        padding: 1.5rem;
+        background: #233140;
+    }
