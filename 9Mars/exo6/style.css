@@ -1,4 +1,4 @@
-/*style reset*/
+/* style reset */
 
             *{      
                 padding: 0;
@@ -28,7 +28,7 @@
                 max-width: 100%;
             }
              h2{
-
+                text-decoration: blink;
                  font-size: 3rem;
                 /* aligner le texte au centre */
                 text-align:center;
@@ -44,7 +44,16 @@
                 margin-bottom: 3rem;
             }
 
-/*style header*/
+/* style largeur maximum */
+    nav ul, portfolio, #about p, #contact, footer section{
+        /* definir une largeur maximum */
+        max-width:95rem;
+
+        /* Centrer une balise de type block dans son parent*/
+        margin: auto;
+    }
+
+/* style header*/
     header{
         background-color: rgba(24,188,156,.9);
         text-align: center;
@@ -55,7 +64,7 @@
     }
 
     
-/*Style nav*/
+/* Style nav*/
 
             nav{
                 background-color: #2C3E50;
@@ -100,7 +109,7 @@
 
 
 
-/*style portfolio*/
+/* style portfolio*/
 
     #portfolio {
         /* Centre les images*/
@@ -123,7 +132,7 @@
 
     }
 
-/*style about*/
+/* style about*/
 
     #about{
 
@@ -153,13 +162,15 @@
         font-weight: lighter;
         color: white;
         
-        border: .3rem solid white;
+        border: .2rem solid white;
         /*créer un bord arrondi*/
         border-radius: 1rem;
         padding: 1rem 1.5rem;
     }
+    
 
-/*style formulaire de contact*/
+
+/* style formulaire de contact*/
     input, textarea{
 
         font-size: 2rem;
@@ -186,7 +197,7 @@
             margin-left: 3rem;
 
             display: inline-block;
-        
+            
             background: #18bc9c;
            
             border-radius: .5rem;
@@ -194,7 +205,7 @@
         }
 
 
-/* Style footer*/
+/* Style footer */
 
     footer{
         color:white;
