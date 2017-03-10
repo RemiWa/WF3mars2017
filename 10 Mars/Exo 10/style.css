@@ -1,0 +1,107 @@
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/* style reset */
+
+            *{      
+                padding: 0;
+                margin: 0;
+            }
+
+nav{
+    text-align: right;
+    position: relative;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li:first-child{
+    position:absolute;
+    left:0;
+}
+
+/*selectionner le deuxieme enfant*/
+
+    nav li:nth-child(2n){
+        background: red;
+    }
+
+/*selectionner le denrier enfant*/
+
+    nav li:last-child{
+        font-size: 3rem;
+    }
+
+/*selectionner la première balise de type p rencontrée*/
+
+    header p:first-of-type{
+
+        font-size:4rem;
+
+    }
+
+/*selectionner une balise par l'attribut et sa valeur*/
+
+    header [alt="photo d'une cabane"]{
+        width:1rem;
+    }
+
+
+/**/
+
+    textarea, input:not([type="submit"]){ 
+        display: block;
+        width: 100%;
+    }
+
+/*selecteur d'éléments adjacents*/
+
+    a + img{
+        width:2rem;
+    }
+
+/*selecteur d'enfant de premier niveau*/
+
+
+    main > a{
+
+        font-size: 3rem;
+
+    }
+
+    /*Ajoute run pseudo-élément à la fin de la balise h1*/
+
+    h1::after{
+
+        /*ajouter du contenu dans le pseudo-élément*/
+        
+        content: "_";
+        display: block;
+        height: .2rem;
+        width: 10rem;
+        margin: 1rem auto;
+        background: red;
+    }
+
+    /* ajouter un pseudo élément au début de la balise h1 */
+
+    h1:before{
+        content: "\F005";
+        position: absolute;
+        top: 1.7rem;
+        left: 48%;
+        background-color: white;
+        padding: .5rem;
+        font-family: FontAwesome;
+
+    }
+
+/*Font awesome like */
+
+    
+    h1{
+        /* bloquer les enfants dans el parent*/
+        position: relative;
+    }

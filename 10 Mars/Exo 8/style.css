@@ -1,0 +1,68 @@
+ul{
+    margin:0;
+
+}
+
+li{
+    display: inline-block;
+    
+
+}
+
+nav{
+    text-align: right;
+    }
+
+/* positionner la première li de la nav */
+#liOnLeft{
+    position: absolute;
+    left: 0;
+}
+
+#liOnRight{
+    Position: absolute;
+    right:0;
+}
+
+
+/*bloquer les enfants Li*/
+
+nav ul {
+    position: relative;
+}
+
+
+footer ul{
+    position: relative;
+}
+
+
+ul, main{
+    max-width: 30rem;
+    padding:0;
+    margin: auto;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+    padding: 0.5rem 1rem;
+}
+
+
+header{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+}
+
+footer{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+main{
+    padding: 2rem 0;
+}
