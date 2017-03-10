@@ -45,7 +45,7 @@
             }
 
 /* style largeur maximum */
-    nav ul, portfolio, #about p, #contact, footer section{
+    nav ul, #portfolio, #about p, #contact, footer section{
         /* definir une largeur maximum */
         max-width:95rem;
 

@@ -1,0 +1,51 @@
+p{
+    margin: 0;
+    padding: 0;
+}
+
+section{
+    margin: 10rem auto;
+    border: .1rem red solid;
+    height: 30rem;
+    width:30rem;
+
+    /* bloquer les enfants dnas le parent */
+    position: relative;
+}
+
+article{
+    font-size: 3rem;
+    font-weight: bold;
+    height: 5rem;
+    width: 5rem;
+
+    /* changer la position pour placer précisément les articles */
+    position: absolute;
+}
+
+#first{
+    background-color: green;
+    right:0;
+    bottom:0;
+}
+
+
+#second{
+    background-color: yellow;
+    Top:0;
+    left:0;
+}
+
+
+#third{
+    background-color: red;
+    Top:0;
+    right:0;
+}
+
+
+#fourth{
+    background-color: blue;
+    left:0;
+    bottom:0;
+}
