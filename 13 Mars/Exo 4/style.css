@@ -1,0 +1,71 @@
+/* la section fait le tour de l'écran */
+
+/*definir les keyframes*/
+@-webkit-keyframes moveMySection{
+
+/*Definir chaque étapes de l'animation */
+
+    0% {top:0; left:0;}
+    25% {left:53.5rem; top:0;}
+    50% {left:53.5rem; top:55rem}
+    75% {top:55rem; Left:0rem;}
+    100% {top:0; left:0;}
+    }
+
+@keyframes moveMySection{
+
+/*Definir chaque étapes de l'animation */
+
+    0% {top:0; left:0;}
+    25% {left:53.5rem; top:0;}
+    50% {left:53.5rem; top:55rem}
+    75% {top:55rem; Left:0rem;}
+    100% {top:0; left:0;}
+    }
+
+
+section{
+    left:0;
+    top:0;
+    position:absolute;
+    height: 5rem;
+    width:5rem;
+    background:rebeccapurple;
+    
+    /* Appliquer l'animation */
+
+    animation-name: moveMySection;
+    animation-duration: 4s;
+    
+    /* Modifier la courbe d'animation */
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+
+    /* Ajouter un delay avant l'animation*/
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+
+    /* gérer le nombre de boulces */
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+
+    /* gérer ke sens de k'animation*/
+    
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+
+section:nth-child(2){
+    background: blue;
+    -webkit-animation-direction: alternate-reverse;
+    animation-direction: alternate-reverse;
+}
+
+
+section:nth-child(3){
+    background: greenyellow;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+}

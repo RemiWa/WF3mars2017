@@ -1,0 +1,358 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Share+Tech+Mono');
+
+
+/* style reset */
+
+            *{      
+                padding: 0;
+                margin: 0;
+            }
+
+        /* faire en sorte que 1rem soit égal à 10px */
+            
+            html{
+                font-size: 62.5%;
+            }
+
+            body{
+                font-size: 1.5rem;
+                font-family: 'Open Sans', sans-serif;
+            }
+            
+        /* supprimer la décorationd es balises a */
+
+            a{
+                text-decoration: none;
+            }
+        
+        /*faire en sorte que les images ne dépassent pas leurs parents */
+            
+            img{
+                max-width: 100%;
+               
+            }
+            
+            h1, h2, h3{
+                font-family: 'Share Tech Mono', monospace;
+                text-transform: uppercase;
+                letter-spacing: 0.3em;
+                
+            }
+
+             h2{
+                font-size: 2rem;
+                /* aligner le texte au centre */
+                text-align:center;
+                /* ajouter une marge exterieure en bas de 30 px*/
+                margin-bottom: 3rem;
+            }
+
+            h3{
+                font-size: 2.5rem;
+                margin-bottom: 3rem;
+            }
+
+/* style largeur maximum */
+    nav ul,  main section:first-child, main section:nth-child(2) p, main section:last-child, footer section{
+        /* definir une largeur maximum */
+        max-width:95rem;
+
+        /* Centrer une balise de type block dans son parent*/
+        margin: auto;
+    }
+
+/* style header*/
+    header{
+        background-color: rgba(24,188,156,.9);
+        text-align: center;
+        color: white;
+
+        /*Ajouter une marge intérieure en bas de 60 px*/
+        padding-bottom: 6rem;
+    }
+
+    
+/* Style nav*/
+
+            nav{
+                background-color: #2C3E50;
+                text-transform: uppercase;
+                /*aligner le texte à gauche*/
+                text-align: right;
+                /* ajouter une marge intérieure (paffing) de 20 px ( 3rem)*/
+                padding: 3rem;
+
+                /* ajouter une marge exterieure bas ( margin) de 30px*/
+                margin-bottom: 6rem;
+                
+            }
+
+            nav a{
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            nav li{
+                display: inline-block;
+                
+            /* Ajouter unemarge à droite */
+                margin-right: 1rem;
+                position: relative;
+            }
+
+            /*bloquer les enfants dans leur parents*/
+
+            nav ul{
+                position: relative;
+            }
+
+            h1{
+
+                font-size: 5rem;
+                padding-top:3rem;
+                position:relative;
+            }
+
+            /* créer une barre sous la balise */
+
+            h1::after{
+                /*Ajouter du contenu (même vide) pour afficher la balise*/
+                content: "";
+                /*changer le type de la balise*/
+                display: block;
+                /*Modifier la taille*/
+                width: 15rem;
+                height:.5rem;
+
+                /*Centrer dans al page*/
+                margin:2rem auto;
+                /* Ajouter de la couleur */
+                background-color: white;
+
+                
+            }
+
+            h1::before{
+                content:"";
+
+                /* Gestion de l'image */
+                background-image: url("img/star-xxl.png");
+                background-color: #18bc9c;
+            
+                /* modifier la taille de l'image de fond */
+                background-size: 100%;
+                /* bloquer la répétition du bg */
+                background-repeat: no-repeat;
+
+                display: block;
+                width: 4rem;
+                height:4rem;
+
+                /*positionner la balise*/
+                position:absolute;
+                top:100%;
+                left:50%;
+                -webkit-transform: translate(-50%, -70%);
+                transform: translate(-50%, -70%);
+                
+            }
+
+            /*selectionner le rpemier enfant*/
+
+            nav li:first-child{
+                
+            }
+
+            header p{
+                font-size: 1.5rem;
+            }
+
+            section{
+                padding: 6rem 0;
+            }
+
+            /*sortir la balie du flux pour la repositionner précisément*/
+
+            #liOnLeft{
+                position:absolute;
+                /*placer la balise à gauche*/
+                left:0;
+                
+                /*Modifier la taille de la font*/
+                font-size:1.5em;
+            }
+
+
+
+/* style portfolio*/
+
+    main section:first-child {
+        /* Centre les images*/
+        text-align: center;
+    }
+
+    main section:first-child article{
+
+        /*ajouter une marge exterieure de 10px*/
+        margin: 1rem;
+
+        /*afficher les images en 3 colonnes*/
+        display:inline-block;
+        width: 29%;
+
+        /*bloquer les enfants dans leur parent*/
+        position: relative;
+
+        line-height: 0;
+    }
+
+
+    main section:first-child a{
+        background: rgba(24,188,156,.7);
+        opacity: 80%;
+        color: white;
+        font-size: 8rem;
+        
+
+        /*sortir la balise du flux pour la postiionnner plus précisément*/
+        position:absolute;
+
+        /*faire en sorte que la balise soit à 100% de la taille de son parent*/
+        width:100%;
+        height:100%;
+        
+        /*placer la balise en haut à gauche*/
+        top:0;
+        left:0;
+
+        /*reduit l'opacité de la balise a*/
+        opacity: 0;
+        
+    }
+
+
+
+    main section:first-child a:hover{
+       opacity: 1;
+    }
+
+    main section:first-child a:hover .fa{
+       top: 50%;
+    }
+
+    
+    main section:first-child .fa{
+        position: absolute;
+        top:20%;
+        left:50%;
+
+        /*décaler sur l'axe X et sur l'axe Y */
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+/* style about*/
+
+    main section:nth-child(2){
+
+        /*modifier la couleur des textes*/
+        color:white;
+
+        /*ajouter une couleur de fond*/
+        background-color: #18bc9c;
+        
+        /*centrer le texte*/
+        text-align: center;
+
+    }
+
+    main section:nth-child(2) p{
+        /*afficher le texte sur 2 colonnes*/
+        column-count: 2;
+
+        /*centre le texte*/
+        text-align: justify;
+
+        margin-bottom: 4rem;
+    }
+
+    main section:nth-child(2) a{
+
+        font-weight: lighter;
+        color: white;
+        
+        border: .2rem solid white;
+        /*créer un bord arrondi*/
+        border-radius: 1rem;
+        padding: 1rem 1.5rem;
+    }
+    
+
+
+/* style formulaire de contact*/
+    input, textarea{
+
+        font-size: 2rem;
+        margin: 1rem auto;
+        padding: 1rem;
+        display: block;
+        width: 90%;        
+
+        /*annuler le style du navigateur pour redefinir ensuite la bordure*/
+        border: none;
+
+        /*redefinir la bordure*/
+        border-bottom: .05rem  lightgrey solid;
+    }
+
+    textarea{
+        /*Définir une hauteur minimale*/
+        min-height: 20rem;
+    }
+
+    /*séléctionner une balise grace à l'attribut et sa valeur*/
+        [type="submit"]{
+            color: white;
+            width:10rem;
+            margin-left: 3rem;
+
+            display: inline-block;
+            
+            background: #18bc9c;
+           
+            border-radius: .5rem;
+            
+        }
+
+
+/* Style footer */
+
+    footer{
+        color:white;
+        background-color: #2C3E50;
+        text-align: center;
+    }
+
+    footer article {
+        display: inline-block;
+        width: 29%;
+        
+        /*gérer l'alignement vertical*/
+        vertical-align: top;
+    }
+
+    [href="http://google.com"]{
+        color: #18bc9c;
+        
+    }
+
+    aside{
+        padding: 1.5rem;
+        background: #233140;
+    }
