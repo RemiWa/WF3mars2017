@@ -1,0 +1,170 @@
+/*
+style reset
+*/
+
+    *{
+        margin:0;
+        padding: 0;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+    }
+
+    section{
+        border: .1rem solid red;
+        height: 15rem; /*Eviter d'utiliser la propriété Height en général - ici pour l'exercice */
+        margin: 4rem;
+        height: 15rem;
+        padding: 2rem;
+        border-radius: 1rem;
+    }
+
+    article {
+        width: 5rem;
+        height: 5rem;
+        background: black;
+        color: white;
+    }
+
+
+/*
+ CSS3 Translate
+    */
+
+    section:first-child article{
+    -ms-transform: translate(2rem, 2rem);
+    -webkit-transform:  translate(2rem, 2rem);
+
+    /* La propriété transform en dernier */
+    transform: translate(2rem, 2rem);
+    }
+
+/* 
+Css3 Rotate
+*/
+
+
+    section:nth-child(2) article{
+    -ms-transform: rotate(45deg);
+    -webkit-transform:  rotate(45deg);
+
+    /* La propriété transform en dernier */
+    transform: rotate(45deg);
+    }
+
+/*
+Skew
+*/
+
+
+    section:nth-child(3) article{
+    -ms-transform: skewX(45deg);
+    -webkit-transform:  skewX(45deg);
+
+    /* La propriété transform en dernier */
+    transform: skewX(45deg);
+    }
+
+
+    section:nth-child(3) article{
+    -ms-transform: skewY(45deg);
+    -webkit-transform:  skewY(45deg);
+
+    /* La propriété transform en dernier */
+    transform: skewY(45deg);
+    }
+
+/*
+Scale
+*/
+
+    section:nth-child(4) article{
+    -ms-transform: scale(4);
+    -webkit-transform:  scale(4);
+
+    /* La propriété transform en dernier */
+    transform: scale(4);
+    }
+
+/*
+rotate X
+*/
+
+
+    section:nth-child(5) article{
+    -webkit-transform:  rotateX(45deg);
+
+    /* La propriété transform en dernier */
+    transform: rotateX(45deg);
+    }
+
+
+/*
+rotate Y
+*/
+
+
+    section:nth-child(6) article{
+    -webkit-transform:  rotateY(45deg);
+
+    /* La propriété transform en dernier */
+    transform: rotateY(45deg);
+    }
+
+
+/*
+rotate Z
+*/
+
+
+    section:nth-child(7) article{
+    -webkit-transform:  rotateZ(45deg);
+
+    /* La propriété transform en dernier */
+    transform: rotateZ(45deg);
+    }
+
+
+/*
+Border radius (creer un rond)
+*/
+
+
+    section:nth-child(8) article{
+   
+
+    /* La propriété transform en dernier */
+     border-radius:50%;
+    }
+
+/* 
+Utilisationde trnaslate pour caler des balises
+*/
+
+    Section:nth-child(9) article{
+        font-size: 1rem;
+        border: .1rem solid red;
+        display: inline-block;
+        margin: .5rem;
+        vertical-align: top;
+        text-align: center;
+
+        /* Bloquer les enfants dans le parent */
+        position: relative;
+    }
+
+        Section:nth-child(9) article p{
+        width: 90%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+
+    }

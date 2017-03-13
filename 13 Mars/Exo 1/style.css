@@ -1,0 +1,86 @@
+/* Styel reset */
+
+        *{ 
+            margin: 0;
+            padding: 0;
+        }
+
+/*configurer la valeur  1rem=10px*/
+
+        html{
+            font-size: 62.5%;
+        }
+
+        header, main, footer{
+            /* Limiter la largeur */
+            max-width: 50rem;
+            Padding: 2rem;
+            margin: 2rem auto;
+
+        }
+
+/* Ne jamais assigner de propriété width et height sur le body */
+        body{
+            font-size: 1.5rem;
+            text-align: center;
+        }
+
+/* Style Header */
+
+    /* Aligner les balise Li de la nav */
+
+        Header{
+        background-color: darkgrey;
+
+
+        /* Centrer la balise dans la page html*/
+     
+        padding: 2rem;
+        position: relative;
+        
+        }
+
+        nav{
+            text-align: center;       
+        }
+
+        nav li{
+            display: inline-block;
+            
+        }
+
+        header li:first-child{
+        position: absolute;
+        right:2rem;
+        }
+
+        header li:last-child{
+        position:absolute;
+        left: 2rem;
+        }
+
+        nav a{
+            text-decoration: none;
+            color: black;
+        }
+/*style main */
+
+    /* Exclure de la sélection les input de type submit*/
+
+        label, textarea, input:not( [type="submit"] ){
+            display: block;
+            width: 100%;
+        }
+        *
+/*style Footer */
+
+    /* Faire en sorte que le footer soit toujours collé en bas de la page */
+
+        footer{
+            background-color:  darkgray;
+            position: fixed;
+            bottom:0;
+            left: 0;
+            width: 100%;
+            max-width: 100%;
+        }

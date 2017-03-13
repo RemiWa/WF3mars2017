@@ -1,0 +1,75 @@
+<!--
+
+-Créer un doc de base html 5
+-créer une ouvertue de page
+-un titre principal
+-une navigation principale avec 4 liens
+        -Home
+        -About
+        -Portfolio
+        -Facebook
+- créer une zone de contenu principal
+-une section 
+-sous titre "about"
+        -1 image
+        -1 paragraphe
+-une section
+        -sous titre "contact"
+        -Fomulaire: nom / email/ message
+-créeer une fermeture de page
+-under MIT licence
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>13 Mars</title>
+</head>
+<body>
+    <Header>
+        <h1> YO </h1>
+
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#" target="_">Facebook</a></li>
+            </ul>
+        </nav>
+    </Header>
+
+    <Main>
+        <section>
+            <h2>About</h2>
+            <img src="image/profile.jpg" alt="photo de profil">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique totam hic explicabo dolorum! Maiores eligendi vitae quam nesciunt voluptatem excepturi deserunt a delectus, veritatis rerum quisquam perferendis ullam hic nostrum.</p>
+        </section>
+        <section>
+            <h2>Contact</h2>
+            <form action="#">
+
+                <!-- Pour associer un label à un input il faut utiliser l'id de l'input dans l'attribut fordu labe-->
+                <label for="userName">Nom :</label>
+                <input type="text" placeholder="Min. 5 caractères" >
+                
+                <label for="email">Email :</label>
+                <input type="email" placeholder="Min. 5 caractères">
+
+                <label for="userMessage">Message :</label>
+                <textarea name="userMessage" id="userMessage" placeholder="Min. 5 caractères"></textarea>
+
+                <!-- Pour valider un formulaire, il faut ajouter à la finuun input de type submit-->
+                <input type="submit" value="Envoyer votre message">
+            </form>
+        </section>
+    </Main>
+    
+    <footer>
+        under MIT License
+    </footer>
+</body>
+</html>
