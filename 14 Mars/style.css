@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
+
+/*Style Reset*/
+
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    /*Configurer le style de base */
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        text-align: center;
+        font-size:1.5rem;
+        font-family:'Roboto', sans-serif;
+        font-weight: 400;
+    }
+    
+    a{
+        text-decoration: none;
+        color: #349aa6;
+    }
+
+    span{
+        text-transform: lowercase;
+    }
+
+    /* appliquer deux designs différents pour la balise h1*/
+    h1{
+        font-size: 1.5rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        line-height: 2em;
+        margin-bottom: 4rem;
+    }
+    
+    p{
+        padding: 4rem 0;
+    }
+
+
+    h1 b{
+        font-size: 2em;
+        display: block;
+    }
+
+    h2, h3{
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding:4rem 2rem;
+    }
+
+    figure{
+    padding: 2rem 0;
+    }
+
+/* style header */
+
+    header{
+
+        color: white;
+
+        /*configurer l'image en parallaxe */
+        background-image: url(img/img-couverture-iphone.jpg);
+        
+        /*Positionner l'image de fond*/
+        background-position: top;
+        
+        /*Modifier la taille de l'image de fond*/
+        background-size: 150%;
+
+        /* Fixer le background pour l'effet parallaxe*/
+        background-attachment: fixed;
+    }
+    
+     /*selectionner la balise suivante*/
+    
+    header h1+a{
+        background: #349aa6;
+
+        /*les balises de type inline ne peuvent pas recevoir de propriété width et height */
+        display:inline-block;
+        width: 5rem;
+        height: 5rem;
+        margin-bottom: 8rem;
+        border-radius: 50%;
+    }
+
+    a img{
+        padding: .8rem;
+    }
+
+    nav{
+        background: #002a35;
+        padding: 1rem;
+        margin-bottom: 4rem;
+    
+    }
+
+    li{
+        display: inline-block;
+        width: 45%;
+        }
+
+    /*selectionner une balise grace à son attribut*/
+
+    [src="img/logo-GRT-gaz-blanc.png"]{
+        width: 15rem;
+        margin-bottom: 4rem;
+    }
+
+/*style main*/
+
+    /* Programme / Réponse */ 
+
+    section:nth-child(2), section:nth-child(4){
+        Color: white;
+
+        /* effet parallaxe css */
+        background-image: url(img/img-foule.jpg);
+        background-attachment: fixed;
+        background-position: center;
+    }
+
+    section:nth-child(2) a, section:nth-child(3) a, section:nth-child(4) a{
+        Color: white;
+        display: inline-block;
+        padding:1rem;
+        border: .1rem solid white;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
+
+    section:nth-child(5) a{
+        Color: #349aa6;
+        display: inline-block;
+        padding:1rem;
+        border: .1rem solid #349aa6;
+        border-radius: .5rem;
+        margin-top: 2rem;
+    }
+    
+    /* Solution */
+
+    section:nth-child(3){
+        Color: white;
+
+        /* effet parallaxe css */
+        background-color: #349aa6
+    }
+
+    /*inscrivez vous */
+
+    [alt="Logo du Salon des maires"]{
+        width: 10rem;
+        margin-bottom:2rem;
+    }
+
+    /* Video */
+
+    section:nth-child(6){
+        background-color: #349aa6;
+        position: relative;
+    }
+
+      section:nth-child(6) video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+       
+    }
+
+     section:nth-child(6) article{
+        color: white;
+        background-color:rgba(0,0,0,.7);
+        padding: 4rem 2rem;
+
+        /*faire passer la balise sur le premier calque*/
+         z-index: 1;
+         position:relative;
+    }
+
+    section:nth-child(6) h3{
+        font-size: 1.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+    }
+
+    section:nth-child(6) a{
+        color:white; 
+    }
