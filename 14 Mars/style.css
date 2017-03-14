@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900');
 
+/*animation*/
+
+    @keyframes pictoHeaderAnim {
+        0%{ transform: translateY(0rem);}
+        50%{ transform: translateY(01rem);}
+        100%{ transform: translateY(0rem);}
+    }
+    
+     @-webkit-keyframes pictoHeaderAnim {
+        0%{ transform: translateY(0rem);}
+        50%{ transform: translateY(01rem);}
+        100%{ transform: translateY(0rem);}
+    }
+
+
+
 /*Style Reset*/
 
     *{
@@ -62,6 +78,10 @@
     padding: 2rem 0;
     }
 
+    img{
+        max-width: 100%;
+    }
+
 /* style header */
 
     header{
@@ -92,7 +112,21 @@
         height: 5rem;
         margin-bottom: 8rem;
         border-radius: 50%;
+
+        /*Appliquer l'animation*/
+        -webkit-animation-name:  pictoHeaderAnim;
+        animation-name:  pictoHeaderAnim;
+
+
+        /*Définir la durée de l'animation*/
+        -webkit-animation-duration: .5s;
+        animation-duration: .5s;
+
+        /*Definir le nombre de boulce*/
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
     }
+
 
     a img{
         padding: .8rem;
@@ -115,86 +149,131 @@
     [src="img/logo-GRT-gaz-blanc.png"]{
         width: 15rem;
         margin-bottom: 4rem;
+
     }
 
-/*style main*/
+/*style main */
 
     /* Programme / Réponse */ 
 
-    section:nth-child(2), section:nth-child(4){
-        Color: white;
+        section:nth-child(2), section:nth-child(4){
+            Color: white;
 
-        /* effet parallaxe css */
-        background-image: url(img/img-foule.jpg);
-        background-attachment: fixed;
-        background-position: center;
-    }
+            /* effet parallaxe css */
+            background-image: url(img/img-foule.jpg);
+            background-attachment: fixed;
+            background-position: center;
+        }
 
-    section:nth-child(2) a, section:nth-child(3) a, section:nth-child(4) a{
-        Color: white;
-        display: inline-block;
-        padding:1rem;
-        border: .1rem solid white;
-        border-radius: .5rem;
-        margin-top: 2rem;
-    }
+        section:nth-child(2) a, section:nth-child(3) a, section:nth-child(4) a{
+            text-align: left;
+            Color: white;
+            display: inline-block;
+            padding:1rem;
+            border: .1rem solid white;
+            border-radius: .5rem;
+            margin-top: 2rem;
+        }
 
-    section:nth-child(5) a{
-        Color: #349aa6;
-        display: inline-block;
-        padding:1rem;
-        border: .1rem solid #349aa6;
-        border-radius: .5rem;
-        margin-top: 2rem;
-    }
+        section:nth-child(2) a::before, section:nth-child(3) a::before, section:nth-child(4) a::before{
+            content: url(img/puce-bas-blanche.png);
+            display: block;
+            height: 3rem;
+            width: 3rem;
+            float: left;
+            margin-right: 1rem;
+            
+        }
+
+        section:nth-child(5) a{
+            Color: #349aa6;
+            display: inline-block;
+            padding:1rem;
+            border: .1rem solid #349aa6;
+            border-radius: .5rem;
+            margin-top: 2rem;
+        }
     
-    /* Solution */
+    /* Solution , Chiffres,footer */
 
-    section:nth-child(3){
-        Color: white;
+        section:nth-child(3), section:nth-child(7), footer{
+            Color: white;
 
-        /* effet parallaxe css */
-        background-color: #349aa6
-    }
+            /* effet parallaxe css */
+            background-color: #349aa6
+        }
 
-    /*inscrivez vous */
+        /*inscrivez vous */
 
-    [alt="Logo du Salon des maires"]{
-        width: 10rem;
-        margin-bottom:2rem;
-    }
+        [alt="Logo du Salon des maires"]{
+            width: 10rem;
+            margin-bottom:2rem;
+        }
 
     /* Video */
 
-    section:nth-child(6){
-        background-color: #349aa6;
-        position: relative;
-    }
+        section:nth-child(6){
+            background-color: #349aa6;
+            position: relative;
+            overflow: hidden;
+        }
 
-      section:nth-child(6) video{
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-       
-    }
+        section:nth-child(6) video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            
+        
+        }
 
-     section:nth-child(6) article{
-        color: white;
-        background-color:rgba(0,0,0,.7);
-        padding: 4rem 2rem;
+        section:nth-child(6) article{
+            color: white;
+            background-color:rgba(0,0,0,.7);
+            padding: 4rem 2rem;
 
-        /*faire passer la balise sur le premier calque*/
-         z-index: 1;
-         position:relative;
-    }
+            /*faire passer la balise sur le premier calque*/
+            z-index: 1;
+            position:relative;
+            
+        }
 
-    section:nth-child(6) h3{
-        font-size: 1.5rem;
-        font-weight: 800;
-        margin-bottom: 2rem;
-    }
+        section:nth-child(6) h3{
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+        }
 
-    section:nth-child(6) a{
-        color:white; 
-    }
+        section:nth-child(6) a{
+            color:white; 
+        }
+
+    /* Quelques Chiffres */
+
+        section:nth-child(7) figure{
+            display: inline-block;
+            width: 49%;
+            vertical-align: top;
+            
+        }
+
+    /* Presentation */
+
+        article+img {
+            width:10rem;
+            margin-bottom:4rem;
+        }
+
+        iframe{
+            border:none;
+            width:100%;
+            min-height: 25rem;
+        }
+
+        /* footer */
+
+        footer{
+            font-size: 1rem;
+            padding: 1rem;
+            over
+        }
