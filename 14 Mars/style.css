@@ -180,10 +180,18 @@
             display: block;
             height: 3rem;
             width: 3rem;
+
+
+            /*habiller la balise*/
             float: left;
-            margin-right: 1rem;
+            margin-right: 1.5rem;
             
         }
+
+            section:nth-child(2) a::after, section:nth-child(3) a::after, section:nth-child(4) a::after{
+            clear: both;
+            
+            }
 
         section:nth-child(5) a{
             Color: #349aa6;

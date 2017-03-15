@@ -1,0 +1,102 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+*{
+    /*inclure dans les largeur le padding et le border*/
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*Style*/
+
+    body{
+        text-align: center;
+    }
+
+    ul{
+        padding: 0;
+    }
+
+    li{
+        display: inline-block;
+        padding: 1rem;
+    }
+
+    /* Masquer la nav pour les mobiles */
+
+    nav{
+        display: none;
+    }
+
+    /* Gestion du burger menu en css*/
+
+    .fa-bars{
+        font-size: 2rem;
+
+     /*Changer l'aspect duy curdseur */
+        cursor: pointer;
+    }
+
+    /*afficher la nav lorsque le curseur est au dessus du menu burger */
+
+    .fa-bars:hover + nav{
+        display: block;
+    }
+
+    article{
+                color:red;
+            }
+
+/*configurer les styles pour les écrans d'une taille minimale de 550 pixels*/
+
+@media screen and (min-width:550px) {
+
+    /*recréer les seclecteurs pour les modifier*/
+
+        article{
+            display: inline-block;
+            width: 49%;
+        }
+
+
+@media screen and (min-width:850px) {
+
+    /*afficher la nav*/
+
+        
+        .fa-bars{
+            display: none;
+        }
+
+        /*afficher la nav*/
+        nav{
+            display:block;
+        }
+
+        /*aligner el texte à gauche des articles*/
+
+        article{
+            text-align: left;
+        }
+        
+        /*Ajuster le style de la nav*/
+
+        nav li{
+            display:inline-block;
+            padding:0.5rem;
+        }
+
+        main{
+            max-width: 950px;
+            margin: auto;
+        }
+         header{
+            width: 950px;
+            margin: auto;
+            background: red;
+            padding: 20px;
+            border: 10px solid blue;
+            
+
+
+        }
+}
