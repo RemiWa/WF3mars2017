@@ -1,0 +1,275 @@
+/* Importer FontAwesome */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+ 
+/* Importer les polices */
+@import url(https://fonts.googleapis.com/css?family=Merriweather|Open+Sans:400,700);
+
+/* style reset */
+
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size: 67.5%;
+        }
+
+
+        body{
+            font-size: 1.5rem; /* => 15px */
+            font-family: 'Merriweather', serif;
+            text-align: center;
+            
+        }
+
+        h1, h2, h3 {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 400;
+            max-width: 50rem;
+            margin: auto;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        h1{
+            margin: auto;
+            font-size: 5rem;
+        }
+
+        h2{
+            margin: auto;
+            font-size: 3rem;
+        }
+
+        h3{
+            font-size:2.4rem;
+        }
+
+        h1:after, h2:after {
+            content: "";
+            display: block;
+            width: 6rem;
+            height: .2rem;
+            background: #F05F40;
+            margin: 2rem auto;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .fa{
+            height:3rem;
+            width: 3rem;
+            font-size: 5rem;
+            color: #F05F40;
+            
+        }
+
+        header > a, main a{
+            font-size: 1.2rem;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            padding: 1rem 1.5rem;
+            -webkit-border-radius: 2rem;
+            border-radius: 2rem;
+        }
+
+
+/* Style Header */
+
+        header{
+            background-image: url(../img/header.jpg);
+            background-size: cover;
+            min-height: 100%;
+            background-position: auto;
+            padding: 16rem 0rem 16rem 0rem;
+            color: white;
+        }
+
+
+        header p{
+            color: rgba(255,255,255,.7);
+            line-height: 2rem;
+            margin: 2rem 0 5rem 0
+            
+        }
+
+        header a{
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+        }
+
+        header a:nth-child(6){
+             background: #F05F40;
+        }
+
+        header h1{
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+/*style nav*/
+
+        nav{
+            color: white;
+            border-bottom: .05rem solid rgba(255,255,255,.7);
+            position: fixed;
+            top:0;
+            Padding:2rem;
+            width: 100%;
+            text-align: right;
+            
+        }
+
+        nav li{
+            display: inline-block;
+            position: relative;
+            font-size: 1rem;
+            font-weight: 400;
+            vertical-align: bottom;
+        }
+
+        nav li:first-child{
+            position: absolute;
+            font-size: 2rem;
+            left: 2rem;
+        }
+
+/* Style Main */
+
+
+
+/*style section 1*/
+       section:nth-child(1){
+
+           background: #F05F40;
+           padding: 10rem 0rem 10rem 0rem;
+           color:rgba(255,255,255,.7);
+           
+       }
+       
+       section:nth-child(1) h2{
+           font-size:3rem;
+           color: white;
+       }
+
+       section:nth-child(1) p{
+           display: block;
+           line-height: 2rem;
+           margin: 2rem 0 5rem 0;
+
+       }
+
+       section:nth-child(1) a{
+           color: black;
+           background: white;
+       }
+
+/*style service*/
+
+            section:nth-child(2){
+                color: #222;
+                padding: 4rem 2rem;
+            }
+
+            section:nth-child(2) h2:after{
+
+                margin-bottom: 4rem;
+
+            }
+
+            section:nth-child(2) .fa{
+                font-size: 4rem;
+                color: #F05F40;
+            }
+
+            h3 + p {
+                color: grey;
+                margin-bottom: 4rem;
+            }
+
+/* style images */
+
+        figure{
+            width: 33.333%;
+            float: left;
+            position: relative;
+            line-height: 0;
+        }
+
+        
+        figcaption{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(240, 95, 64, .7);
+            line-height: 1;
+            opacity: 0;
+        }
+
+        figcaption:hover{
+                opacity: 1;
+            }
+
+        figcaption a{
+            color: rgba(255, 255, 255, .7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80%;
+        
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%)
+        }
+
+            a b{
+            font-weight: 400;
+            font-size: 1.3em;
+            color: white;
+            display: block;
+            text-transform: none;
+        }
+
+/*style download */
+
+        Section:nth-child(4){
+            background-color: rgb(34, 34, 34);
+            padding: 5rem 0 5rem 0;
+            color:white;
+            clear:both;
+        }
+
+        section:nth-child(4) h2{
+            margin-bottom: 4rem;
+        }
+
+        section:nth-child(4) h2:after{
+            display: none;
+        }
+
+/* Style Footer */
+        footer{
+            color: #222;
+            padding: 4rem 2rem;
+        }
+
+        footer .fa{
+            font-size: 3rem;
+            display: block;
+            margin: 3rem auto 1rem auto;
+        }
+
+        footer a{
+            color: #F05F40;
+        }
