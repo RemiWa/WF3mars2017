@@ -1,0 +1,337 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Space+Mono:400,700|Work+Sans:400,700');
+
+/* reset */
+
+*{
+    margin: 0;
+    padding:0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+}
+
+/*style des listes*/
+ul{
+    list-style: none;
+}
+
+a, header li{
+    text-decoration: none;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+}
+
+h1{
+    color: black;
+    font-family: 'Space Mono', monospace;
+    
+    letter-spacing: .8rem;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+
+}
+
+h1 span{
+    text-transform: lowercase;
+    font-weight: 400;
+    display: block;
+    font-size: .5em;
+    letter-spacing: initial;
+}
+
+h2{
+    font-family: 'Space Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+img{
+    max-width:100%;
+}
+
+        /* style nav */
+
+            header{ 
+                background-color: #f4f4f4;
+                padding: 2rem 2rem 3rem 2rem;
+
+                /*bloquer les enfants dans le parent*/
+                position: relative;
+            }
+
+            nav{
+                display:none;
+            }
+
+            nav a{
+                color: black;
+            }
+
+
+
+            header li{
+                
+                background: rgba(255, 255, 255, .50);
+                padding: 1rem;
+                margin-bottom: .8rem;
+            }
+
+            header li:hover{
+                background: rgba(255, 255, 255, 1);
+                
+            }
+
+            header li:hover a{
+                color: lightcoral;
+            }
+
+            header>a{
+                /*la balie a qui est enfant direct du header  ou h1+a (la balise a qui suit directement le h1 ou header:nthchild(2) (le deuxième enfant du header)*/
+                display:inline-block;
+                width: 4rem;
+                height: 4rem;
+                padding-top: .8rem;
+
+                font-size: 1.9rem;
+
+                -webkit-border-radius: 50%;
+                border-radius: 50%;
+                background: #f4f4f4;
+                color: black;
+
+                position: absolute;
+
+                top: 100%;
+                left: 50%;
+                -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+
+                header > a:hover{
+                    color: lightcoral;
+                    border-color: lightcoral;
+                }
+
+
+            /* Afficher la nav au survol de la balise a du header*/
+
+                /* le survol de la balise a fait apparaitre la nav*/
+                header > a:hover + nav{
+                    display:block;
+                }
+
+            /* Style main */
+
+                main {
+                    padding: 4rem 2rem 10rem 2rem;
+                }
+
+            /* style portfolio */
+
+                figure{
+                    position:relative;
+                    /*margin: 2rem auto;*/
+                }
+
+
+                figure:after{
+                    content: "";
+                    background: white;
+                    height:3rem;
+                    position: absolute;
+                    width:100%;
+                    bottom: 0;
+                    left:0;
+
+
+                }
+
+
+                figcaption{
+                    font-weight: 700;
+                    position:absolute;
+                    bottom: 0;
+                    left:50%;
+                    background: white;
+                    padding: 1rem;
+                    width:70%;
+
+                    z-index: 1;
+
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                }
+
+                figcaption span{
+                    font-weight: 400;
+                    display: block;
+                }
+
+
+                .portfolioPage article {
+                    position: relative;
+                    margin: 2rem auto;
+
+                    /*masquer les éléments qui dépassent*/
+                    overflow: hidden;
+                }
+
+                .portfolioPage main a {
+                    color: white;
+                    background: black;
+                    padding: .5rem 1rem;
+
+                    position: absolute;
+                    top: -10%;
+                    left: 50%;
+                    z-index: 1;
+
+                    -webkit-transform: translateX(-50%);
+                    transform: translateX(-50%);
+                }
+
+                /*changer la proptiété de al balise a au survol de l'article*/
+
+                .portfolioPage article:hover a{
+                    top: 40%;
+                }
+
+        /*style contact*/
+
+            textarea, input:not([type="submit"]){
+                display: block;
+                width:100%;
+                border:none;
+                border-bottom: .1rem  dotted lightcoral;
+                padding: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            textarea{
+                min-height: 15rem;
+            }
+
+            form{
+                margin:2rem auto;
+            }
+
+            form :last-child{
+                background: white;
+                color: black;
+                border:.1rem solid black;
+                padding: .5rem 1rem;
+            }
+
+            iframe{
+                width: 100%;
+                min-height: 20rem;
+                border:none;
+            }
+            
+        /* Style footer */
+
+                footer{
+                    position: fixed;
+                    bottom:0;
+                    left:0;
+                    width:100%;
+                    background: #f4f4f4;
+                    padding: 2rem;
+
+                    z-index:100;
+                }
+
+
+                footer a{
+                    color: lightcoral;
+                }
+
+                /* toutes les balises li du footer sauf la dernière*/
+
+                footer li:not(:last-child){
+                    display: inline-block;
+                    margin-bottom: 1rem;
+                }
+
+
+/* Requetes media */
+
+@media screen and (min-width: 400px){
+    
+        /*style portfolio*/
+        .portfolioPage article{
+            display: inline-block;
+            width:49%;
+
+            /* Gérer les paddings */
+            padding: 0 1rem 0 0;
+        }
+
+        
+        .portfolioPage article:nth-child(2n + 2){
+            padding: 0 0 0 1rem;
+        }
+}
+
+@media screen and (min-width: 750px){
+
+
+        /*style reset */
+        main, h1, nav{
+            max-width:85rem;
+            margin: auto;
+        }
+
+        h1{
+            font-size: 4rem;
+            text-indent: 1rem;
+        }
+
+        h1 span{display: initial}
+
+        /*style header */
+
+            header{
+                text-align: left;
+                text-indent: 1rem;
+            }
+
+            /*Masquer le Burger */
+            header > a{
+                display: none;
+            }
+
+            nav{
+                display: block;
+
+            }
+            
+            nav li{
+                display: inline-block;
+                text-indent: 0rem;
+            }
+
+            /*style main*/
+            main{
+                    padding; 4rem 0 10rem 0;
+            }
+
+
+}
+
