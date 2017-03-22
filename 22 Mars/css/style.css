@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700|Roboto:400,700');
+
+
+/* Style Reset */
+
+    *{
+        margin:0;
+        padding:0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    h1{
+        font-family:'Quicksand', sans-serif;
+        color: #0b0b2f;
+        line-height: 4rem;
+        font-weight: 800;
+        font-size: 3rem;
+        
+        padding-bottom: 2rem;
+    }
+
+    h2{
+        font-family:'Quicksand', sans-serif;
+        line-height: 2.5rem;
+        font-weight: 800;
+        font-size: 2rem;
+        color: white;
+        background: #0b0b2f;
+        display: inline-block;
+
+        margin-bottom: 2rem;
+        padding: 1rem;
+
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+ 
+    main section:nth-child(1), main section:nth-child(2), main section:nth-child(3), main section:nth-child(4){
+        max-width: 75rem;
+        margin:auto;
+        padding: 2rem 2rem 4rem 2rem;
+    }
+
+/* Style header */
+
+    header{
+        color: white;
+    }
+
+    nav{
+        background: url("../img/back.jpg");
+
+        width: 100%;
+        text-align: right;
+        background-size: cover;
+        padding: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    header ul{
+        max-width: 75rem;
+        margin:auto;
+    }
+
+    header li{
+        font-family:'Quicksand', sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+
+        display: inline-block;
+        position: relative;
+        
+
+    }
+
+    header li:first-child{
+
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: .5rem;
+        
+
+        position:absolute;
+        top:2rem;
+        left: 2rem;
+    }
+
+    header a{
+        color: white;
+        padding-right: 1rem;
+    }
+
+/*style section 1 */
+    main section:nth-child(1) p{
+        padding-top: 2rem;
+    }
+
+    main section:nth-child(1) img{
+        height:20%;
+        width: 20%;
+        border-radius: 50%;
+        float: left;
+        margin: 0rem 2rem 2rem 0;
+    }
+
+/* Style section 2 */
+    /*style paragraphes / colonnes */
+    main section:nth-child(2) p{
+
+     display: inline-block;
+     width:49%;
+     padding: 1rem;
+    }
+
+
+/*Style portfolio*/
+
+    main section:nth-child(3) figure{
+        max-width: 23%;
+        display: inline-block;
+        position: relative;
+        margin: .5rem;
+
+    }
+
+    main section:nth-child(3) p{
+        margin-bottom: 2rem;
+    }
+
+
+
+    figcaption{
+        position: absolute;
+        width:100%;
+        background: rgba(255, 255, 255, .7);
+        bottom:0;
+        left:0;
+        padding:1rem;
+    }
+
+    figcaption a{
+        color:black;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        
+    }
+
+
+/*style formulaire */
+
+            main section:nth-child(4) article{
+                display: inline-block;
+                width: 49%;
+            }
+
+            textarea, input:not([type="submit"]){
+                display: block;
+                border:none;
+                background: #eeeeee;
+                padding: 1rem;
+                margin-bottom: 2rem;
+                width:100%;
+            }
+
+            textarea{
+                min-height: 15rem;
+            }
+
+            form{
+                
+                margin:2rem auto;
+            }
+
+            form :last-child{
+                background: #0b0b2f;
+                color: white;
+                border: none;
+                padding: .5rem 1rem;
+            }
+
+            iframe{
+                padding-left: 2rem;
+                height: 30rem;
+                width: 100%;
+                border:none;
+            }
+
+/* Style footer */
+
+     footer{
+        
+        background: #0b0b2f;
+
+        width: 100%;
+        text-align: left;
+        background-size: cover;
+        padding: 2rem;
+
+    }
+
+    footer ul{
+        max-width: 75rem;
+        margin:auto;
+    }
+
+    footer li{
+
+        font-family:'Quicksand', sans-serif;
+        font-weight: 800;
+        font-size: 1.5rem;
+
+        display: inline-block;
+        position: relative;
+
+    }
+
+    footer li:first-child{
+
+        font-size: 3rem;
+        font-weight: 800;
+        letter-spacing: .5rem;
+
+        position:absolute;
+        right:2rem;
+    }
+
+    
+    footer a{
+        color: white;
+        padding-right: 1rem;
+    }
