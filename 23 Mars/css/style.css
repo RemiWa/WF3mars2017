@@ -1,0 +1,160 @@
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+
+
+/*style reset */
+
+    *{
+        margin: 0;
+        padding: 0;
+
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    h2{
+        font-size:3rem;
+        color: red;
+    }
+
+    h2:before{
+        font-family: "FontAwesome";
+        content:"\f006";        
+        color:red;
+        padding:2rem;
+        
+    }
+
+    /*Style  header 
+    - ajouter une marge interieure de 20px
+    -la nav ne dépasse aps 850px
+    les liens sosnt centrés sauf le premier qui es à gauche le dernier à droite
+  
+  */
+
+  header{
+      border: 1rem dashed black;
+      padding: 2rem;
+      text-align: center;
+  }
+
+  nav{
+      max-width: 85rem;
+      
+      margin: auto;
+      position: relative;
+  }
+
+  ul{
+      display: inline-block;
+  }
+
+  li{
+      display: inline-block;
+
+  }
+
+  li:first-child {
+      position: absolute;
+      left:0;
+  }
+
+  li:last-child{
+      position: absolute;
+      top:0;
+      right: 0;
+  }
+
+main{
+    max-width: 85rem;
+    margin:0 auto 4rem auto;
+    }
+
+section:not(:last-child){
+    margin-bottom: 4rem;
+}
+
+/*style portfolio
+-2colonnes
+figcaptions calés au dessus de l'image - Fond blanc à 50% d'opacité*/
+
+
+        figure{ 
+            display:inline-block;
+            max-width: 49%;
+            position: relative;
+        }
+
+        figcaption{
+            background: rgba(255, 255, 255, .5);
+            color: black;
+            position: absolute;
+            width: 100%;
+            top:0;
+            left:0;
+            padding: 1rem;
+            
+        }
+
+/*style formulaire 
+le textarea et les input sauf le type submit font toute la largeur du forulaire
+le type submita une couleur de fond et une couleur de police
+
+*/
+
+form{
+    text-align: right;
+}
+
+ textarea, input:not([type="submit"]){
+
+    color: black;
+    border:.1rem solid lightgrey;
+    padding:1rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    width: 100%;
+}
+
+
+[type="submit"]{
+
+    background:lightgrey;
+    color:black;
+    padding:1rem;
+    border: none;
+}
+
+
+/* methode desktop down */
+
+@media screen and (max-width: 450px){
+
+    figure, form, article{
+        max-width:100%;
+    }
+
+    li:firstchild,  li:last-child{
+        position:initial;
+    }
+
+    li{
+        padding: 0;
+    }
+}

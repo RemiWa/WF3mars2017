@@ -193,6 +193,9 @@
             left:0;
         }
 
+        h2 span{
+            display:inlineblm
+        }
 
         section:nth-child(2) p, form, iframe{
             Vertical-align: top;
