@@ -1,0 +1,30 @@
+* {
+    margin: 0 ;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+header, main, footer{
+    max-width: 60rem;
+    margin: auto;
+}
+
+textarea{
+    width: 100%;
+    min-height:20rem;
+}
+
+header{
+    color: white;
+    background: black;
+    padding:2rem;
+    max-height:5rem;
+    overflow: auto;
+}

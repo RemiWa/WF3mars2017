@@ -11,7 +11,8 @@
 */
 
 var userBet = '';
-
+var userWin = 0;
+var computerWin= 0;
 
 // L'uttilisateur doit choisir entre pierre feuille et ciseaux
 // créer une fonction qui prend en paramètre le choix de l'utilisateur.
@@ -66,17 +67,34 @@ function computerChoice(){
 
     }else if(userBet == 'pierre'&& computerBet == 'ciseaux') {
         document.querySelector('p').textContent = 'gagné';
+        // incrémenter la variable userWin de 1
+        userWin++;
     
     }else if( userBet== 'feuille' && computerBet=='pierre'){
         document.querySelector('p').textContent = 'gagné';
+        userWin++;
 
     }else if (userBet=='ciseau' && computerBet=='feuille'){
         document.querySelector('p').textContent = 'gagné';
-    
+        userWin++;
+
     } else{
         document.querySelector('p').textContent = 'LOSER';
-    }
+        computerWin++;
+        };
 
-    }
+    };
 
+    // Vérifier les valeurs de userWin et computerWin
+
+    if(userWin == 3){
+        
+        // Afficher le message dans le body
+        document.querySelector('body').innerHTML = '<h1>Vous avez gagné <a href="#">Rejouer</a>';
+    };
+
+    if(computerWin==3 ){
+        // Afficher le message dans le body
+        document.querySelector('body').innerHTML = '<h1>Vous avez perdu <a href="#">Rejouer</a>';
+    }
 };
