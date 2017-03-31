@@ -23,11 +23,11 @@ $(document).ready(function(){
 
         var myContent = { 
 
-        Accueil: '<h3>Contenu de la page d\'accueil</h3>        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>',
-        Portfolio: '<h3>Contenu de la page Portfolio</h3>        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>',
-        Contacts: '<h3>contenu de la page Contacts</h3>        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>'
+        Accueil: '<h3>Contenu de la page d\'accueil </h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>',
+        Portfolio: '<h3> Contenu de la page Portfolio </h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>',
+        Contacts: '<h3> contenu de la page Contacts </h3> <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum eveniet, corrupti rem voluptatum doloremque ipsam aperiam temporibus delectus, dolor, facilis veniam corporis, voluptates explicabo sed tenetur? Minus eaque ab, vel?</p>'
 
-    }
+    };
 
 
 
@@ -41,6 +41,12 @@ $(document).ready(function(){
     // Générer une balise nav+ul dans le header
 
     myHeader.append( '<nav><i class="fa fa-bars" aria-hidden="true"></i><ul></ul></nav>');
+
+    // Activer le burger menu au click sur la balise .fa-bars
+    $('.fa-bars').click(function(){
+
+        $('nav ul').toggleClass('toggleBurger');
+    });
 
     //  Fair eune boucle sur myNav pour générer les liens de la nav
 
@@ -59,10 +65,17 @@ $(document).ready(function(){
         myMain.append('<h2>' + myTitles.Accueil + '</h2>');
         myMain.append('<section>' + myContent.Accueil + '</section>' );
 
+        //  Ajouter la class .active sur la première li de la nav
+        $('nav li:first').addClass('active');
+
 
         //  cAPTER LE CLICK SUR LA BALISE a en bloquant le comportement naturel des balises a
         $('a').click(function(evt){
     
+        // supprimer la classe .active des balises li de la nav
+        $('nav li').removeClass('active');
+
+
         // bloquer le comprotement naturel de la balise
         evt.preventDefault();
 
@@ -79,24 +92,37 @@ $(document).ready(function(){
 
             $('h2').text( myTitles.Accueil);
             // Selectionner la section pour changer el contenu
-            $('section').text(myContent.Accueil);
+            $('section').html(myContent.Accueil);
+
+            //  ajjouter la classe active sur la balise li de la balise a selectionnée
+            $(this).parent().addClass('active');
 
 
         } else if($(this).attr('href') == 'Portfolio'){
 
             $('h2').text( myTitles.Portfolio);
             // Selectionner la section pour changer el contenu
-            $('section').text(myContent.Portfolio);
+            $('section').html(myContent.Portfolio);
+
+            //  ajjouter la classe active sur la balise li de la balise a selectionnée
+            $(this).parent().addClass('active');
 
             
         } else {
             $('h2').text( myTitles.Contacts);
             // Selectionner la section pour changer el contenu
-            $('section').text(myContent.Contacts);
-        };
+            $('section').html(myContent.Contacts);
+
+            //  ajjouter la classe active sur la balise li de la balise a selectionnée
+            $(this).parent().addClass('active');
+
+    };
+
+        // Fermer le burgermenu
+        $('nav ul').removeClass('toggleBurger');
 
 
-        } );
+    } );
 
 
 

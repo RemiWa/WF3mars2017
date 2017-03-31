@@ -16,7 +16,7 @@
 
     body{
         font-size: 1.5rem;
-        line-height: 3rem;
+
         font-family: 'Crimson Text', serif;
         font-weight: 400;
         text-align: center;
@@ -27,9 +27,19 @@
         font-weight: 400;
     }
 
+  nav a{
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+        font-family:'Fjalla One', sans-serif;
+        letter-spacing: .5rem;
+  }
+
 /*
 Style header
 */
+
+
 
     header, footer{
         background: #f3f3f3;
@@ -38,32 +48,51 @@ Style header
         position: relative;
     }
 
-    .fa-bars{
+.fa-bars {
+        font-size: 2rem;
+        padding-top: .6rem;
         position: absolute;
         background: #f3f3f3;
-
-        width:4rem;
-        height:4rem;
-        left:50%;
+        border: .3rem solid white;
+        width: 4rem;
+        height: 4rem;
+        left: 50%;
         bottom: 0;
         cursor: pointer;
 
         -webkit-border-radius: 50%;
         border-radius: 50%;
 
-        transform: translate(-50%,50%);
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+    }
+
+    h1{
+        margin-bottom: 2rem;
     }
 
     h1 span{
         display:block;
-        font-family: 'Crimson Text', serif;
+        font-family:'Fjalla One', sans-serif;
+        letter-spacing: .8rem;
         padding-top:1rem;
-        font-weight: 700;
+        font-weight: 400;
         font-size: 1.3rem;
+        margin:1rem 0 1rem 0;
     }
 
     nav ul{
-        display: none;
+        
+        height: 0;
+        overflow: hidden;
+
+        -webkit-transition: all .5s;
+        transition: :all .5s;
+
+    }
+
+    .toggleBurger{
+        height: 15rem;
     }
 
 /*
@@ -71,6 +100,7 @@ Style Main
 */
 
     h2{ 
+        padding:2rem;
         color:black;
     }
 
@@ -87,6 +117,11 @@ Style Main
         margin-bottom:1rem;
     }
 
+    main, nav{
+        max-width:85rem;
+        margin:auto;
+    }
+
     /*
     Style footer
     */
@@ -99,3 +134,49 @@ Style Main
         width:100%;
         margin-bottom: 0;
     }
+
+    nav li{
+
+        font-family: 'Crimson Text', serif;
+        padding: 1rem;
+        margin-bottom: 1rem;
+  }
+
+  .active {
+      background: white;
+  }
+
+  .active a{
+      color:red;
+  }
+
+@media screen and ( min-width: 850px) {
+
+    /*Style Header*/
+
+    header{
+     text-align: left;
+    
+    }
+
+    fa-bars{
+        display: none;
+    }
+
+
+    nav ul{
+        height: auto;
+        position: absolute;
+        right:2rem;
+        top: 6rem;
+    }
+
+    nav li{ 
+        Display: inline-block;
+    }
+
+    nav li:not:last-child{
+        margin-right: .5rem;
+    }
+
+}
