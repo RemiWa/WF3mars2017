@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,700|Fjalla+One');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+/*
+ Style Reset
+*/
+    * {
+        margin: 0;
+        padding:0;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    html{
+        font-size: 62.5%;
+    }
+
+    body{
+        font-size: 1.5rem;
+        line-height: 3rem;
+        font-family: 'Crimson Text', serif;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        font-family:'Fjalla One', sans-serif;
+        font-weight: 400;
+    }
+
+/*
+Style header
+*/
+
+    header, footer{
+        background: #f3f3f3;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+    }
+
+    .fa-bars{
+        position: absolute;
+        background: #f3f3f3;
+
+        width:4rem;
+        height:4rem;
+        left:50%;
+        bottom: 0;
+        cursor: pointer;
+
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+
+        transform: translate(-50%,50%);
+    }
+
+    h1 span{
+        display:block;
+        font-family: 'Crimson Text', serif;
+        padding-top:1rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+    }
+
+    nav ul{
+        display: none;
+    }
+
+/*
+Style Main
+*/
+
+    h2{ 
+        color:black;
+    }
+
+    h2:after{
+        content:"";
+        display:block;
+        width:5rem;
+        height:.5rem;
+        margin: 1rem auto 2rem auto;
+        background: black;
+    }
+
+    h3{
+        margin-bottom:1rem;
+    }
+
+    /*
+    Style footer
+    */
+
+    footer{ 
+        background: #f3f3f3;
+        position: fixed;
+        bottom:0;
+        left: 0;
+        width:100%;
+        margin-bottom: 0;
+    }
