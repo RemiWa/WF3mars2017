@@ -280,6 +280,81 @@ img{
 
 
         /*style contact*/
+form{
+            text-align: left;
+            margin: 2rem auto;
+        }
+
+        select{
+            margin: 1rem auto 3rem auto;
+        }
+
+        textarea{
+            min-height: 20rem;
+        }
+
+        
+        textarea, input, label{
+            display: block;
+            width: 100%;
+            border: none;
+            padding: 1rem;
+        }
+
+        input{
+            position: relative;
+            z-index: 2000;
+            background-color: transparent;
+        }
+
+        [type="checkbox"]{
+            display: inline-block;
+            width: auto;
+        }
+
+
+        textarea, input:not([type="submit"]){
+            border-bottom: .1rem solid lightcoral;
+            margin-bottom: 2rem;
+        }
+
+
+        form article{
+            position: relative;
+        }
+
+        label{
+            padding: 0;
+            font-weight: 700;
+            transition: all .5s;
+        }
+
+        label:not([for="userSubject"]){
+            position: absolute;
+            top: .5rem;
+        }
+
+        label.openedLabel {
+            top: -1.5rem;
+            font-size: 1.2rem;
+            color: grey;
+        }
+
+        form b {
+            font-size: .5rem;
+            text-transform: uppercase;
+            color: lightcoral;
+
+            -webkit-transition: opacity .5s;
+            transition: opacity .5s;
+
+        }
+
+        .hideError b{ 
+
+            opacity: 0;
+        }
+
 
         /* Style footer */
 
@@ -372,7 +447,7 @@ img{
 
             /*style main*/
             main{
-                    padding; 4rem 0 10rem 0;
+                    padding: 4rem 0 10rem 0;
             }
 
 
