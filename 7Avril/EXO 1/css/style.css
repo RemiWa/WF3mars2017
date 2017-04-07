@@ -1,0 +1,44 @@
+/*Reset*/
+
+*{
+    margin: 0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+
+
+
+/*Style*/
+
+    /*Style Header*/
+
+    header{
+        background: #3b5997;
+    }
+
+    header section{
+        max-width: 95rem;
+        margin: auto;
+        display: inline-block;
+    }
+
+    header img{
+        display: inline-block;
+
+    }
+
+    header form{
+        display: inline-block;
+        text-align: right;
+    }
