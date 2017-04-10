@@ -42,3 +42,43 @@ body{
         display: inline-block;
         text-align: right;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    footer{
+        font-size: 1.2rem;
+        color: #737373;
+    }
+
+    footer ul:first-of-type {
+        border-bottom: .1rem solid #d9d9d9;
+        padding-bottom: 1rem;
+    }
+
+    footer ul:first-of-type li{
+        margin-right: .5rem;
+    }
+
+    footer li{
+        display: inline-block;
+    }
+
+    footer ul:last-of-type li {
+        width: 16%;
+        vertical-align: top;
+        margin-bottom: .5rem;
+    }
+    

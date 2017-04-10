@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,700i|Roboto:400,700,900');
+
+
+/*Style reset*/
+
+*{
+    margin:0;
+    padding: 0;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width:100%;
+}
