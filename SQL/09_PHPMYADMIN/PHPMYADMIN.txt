@@ -1,0 +1,49 @@
+*******************************
+PHPMYADMIN
+*******************************
+
+QUOI?
+
+PMA est une interface d'administration pour le sgbd mysql. Il est écrit en php et s'appuie sur le serveur http Apache . Permet d'adminisitrer les elements suivants 
+    - les BDD
+    - les tables et leurs champs
+    - les index, les clés primaires et étrangères
+    - les utilisateurs de la base et leur permissions$
+    - d'exporter / importer des données dasn divers formats.
+
+On peut remplacer PmA par d'autres interface d'admin de bdd: Db Ninja ; SQL BUSSY, MY WEB SQL
+
+---------------------------------
+Definition des types de champs:
+    -INT pour nombre entier (taiille maxi de 11 caractères pour une valeur entre )
+
+    -VAR CHAR pour chaine de caractères de longueur variable (taille maxi: 255 caractères)
+    -TEXT pour chaine de caractère de longuieurvariable (taille maxi 65535)
+    -DATE au format YYYY-MM--BDD-DATETIME au format YYYY-MM-DD et hH:MM:BUSSY
+    -LES FLOATS poue es nombres décimaux.
+    -NULL pour donner une liste de valeur selon la synthaxe 'm', 'f'
+
+    Definition des attributs
+    -BINARY pour rendre le champs sennible à la casse
+    Unsign: pas de chiffre négatif
+    -Unsign zerofill: pas de chiffre négatif+ complète avec des 0 (ex 12 en int de 4, donnera en basse 0012)
+
+----------------------------------
+IMPORT / EXPORT de base de données:
+
+-via PHPMYADMIN : avec des onglets "import" / "export" correspondants
+
+--en ligne de commande
+Demarrer > executer > CMD 
+
+Puis pour faire un export de BDD
+cd c:\xampp\mysql\bin
+mysqldump -u root entreprise > monFichier.sql
+
+-- LE fichjier d'export appeleé monFichier.sql se trouve par défaut dans mon dossier xampp\mysql\bin\
+
+-Pour faire un import en bdd:
+1 créer une base de données d'accueil: import_entreprise
+2 Mettre le fichier d'ilmport dnas le dossier par defaut 
+cd c:\xampp\mysql\bin
+3 saisir dans l'invite de commandes : mysql -u root import_entreprise2 < monFichier.sql
