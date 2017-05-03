@@ -49,5 +49,37 @@ function executeRequete($req, $param = array()) { //param est una rray vide par 
 
 }
 
+//--------------------------------------------------Fontions du panier --------------------------------------------------
+
+function creationDuPanier (){
+    if(!isser($_SESSION['panier'])){
+        //s'il n'existe pas de paniuer dans session, on le crée
+        $_SESSION['panier'] = array(); // Le panier est un array vide
+        $_SESSION['panier']['titre'] =array();
+        $_SESSION['panier']['id_produit'] =array();
+        $_SESSION['panier']['quantite'] =array();
+        $_SESSION['panier']['prix'] =array();
+
+    }
+}
+
+
+function ajouterProduitDasnPanier ($titre, $id_produit, $quantite, $prix ){
+    //Ces arguments sont en provenance de panier.php
+
+    creationDuPanier(); //créer la structure si elle n'existe pas
+    $position_produit = array_search($id_produit, $_SESSION['panier']['id_produit']); //arraysearch retourne un chiffre si l'id_produit est prése,nt dans l'array $_session['panier'] qui correspond à l'indice auquel se situe l'éléemnt. Sinon retourne false.
+
+}
+
+
+
+
+
+
+
+
+
+
 
 ?>

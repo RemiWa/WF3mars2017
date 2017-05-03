@@ -160,61 +160,95 @@ echo $contenu;
 
 if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == 'modification')):
 //Si on a demandé l'ajout du'n produit ou sa modification, on affiche le formulaire
+
+        // 8) Formulaire de modification avec présaisie des infos dans le formulaire:
+
+
+        if(isset($_GET['id_produit'])){
+            $resultat = executeRequete("SELECT * FROM produit WHERE id_produit = :id_produit", array(':id_produit' => $_GET['id_produit']));
+            // $resultat est un objet car on a exécuter une requete deçu. 
+
+            $produit_actuel = $resultat->fetch(PDO::FETCH_ASSOC);  //on fait un fetch assoc pour le transformer en array
+                                                                   // pas de while car on a qu'un seul produit
+       
+       
+        }
+
+
+
+
+
+
+
+
+
+
+
 ?>
+
+
+
+
+
 
 <h3>formulaire d'ajout ou de modification d 'un produit</h3>
 <form action="" method="post" enctype="multipart/form-data"><!--multipart/form-data permet d'uploader un fichier et de générer une superglobale $_FILES'-->
-    <input type="hidden" id="'produit" name="id_produit" value="0">  <!--Champs caché qui réceptionne l'id produit necessaire lros de la modification d'un produit existant-->
+    <input type="hidden" id="id_produit" name="id_produit" value="<?php echo $produit_actuel['id_produit'] ?? 0; ?>">>  <!--Champs caché qui réceptionne l'id produit necessaire lros de la modification d'un produit existant-->
     <label for="reference">Référence</label>
-    <input type="text" id="reference" name="reference" value=""><br><br>
+    <input type="text" id="reference" name="reference" value="<?php echo $produit_actuel['reference'] ?? ''; ?>"><br><br>
 
     <label for="categorie">Catégorie</label>
-    <input type="text" id="categorie" name="categorie" value=""><br><br>
+    <input type="text" id="categorie" name="categorie" value="<?php echo $produit_actuel['categorie'] ?? ''; ?>"><br><br>
+
 
     <label for="titre">Titre</label>
-    <input type="text" id="titre" name="titre" value=""><br><br>
+    <input type="text" id="titre" name="titre" value="<?php echo $produit_actuel['titre'] ?? ''; ?>"><br><br>
 
     <label for="description">Description</label>
-    <textarea name="description" id="description"></textarea><br><br>
+    <textarea name="description" id="description"><?php echo $produit_actuel['description'] ?? ''; ?></textarea><br><br> 
 
     <label for="couleur">Couleur</label>
-    <input type="text" id="couleur" name="couleur" value=""><br><br>
+    <input type="text" id="couleur" name="couleur" value="<?php echo $produit_actuel['couleur'] ?? ''; ?>"><br><br>
 
-    <label for="taille">Taille</label>
+    <label>Taille</label>
     <select name="taille">
-        <option value="s">s</option>
-        <option value="m">m</option>
-        <option value="l">l</option>
-        <option value="xl">xl</option>     
-    </select>
+        <option value="S" selected>S</option>
+        <option value="M" <?php if (isset($produit_actuel['taille']) && $produit_actuel['taille'] == 'M') echo 'selected'; ?> >M</option>
+        <option value="L" <?php if (isset($produit_actuel['taille']) && $produit_actuel['taille'] == 'L') echo 'selected'; ?> >L</option>
+        <option value="XL" <?php if (isset($produit_actuel['taille']) && $produit_actuel['taille'] == 'XL') echo 'selected'; ?> >XL</option>
+    </select><br><br>
 
-    <label>Public</label>
-    <input type="radio" name="public" value="m" checked>Homme
-    <input type="radio" name="public" value="f">Femme
-    <input type="radio" name="public" value="mixte">Mixte<br><br>
-    
-    <label for="photo">Photo</label><br><br>
+  <label>Public</label>
+     <input type="radio" name="public" value="m" checked> Homme
+     <input type="radio" name="public" value="f"<?php if (isset($produit_actuel['public']) && $produit_actuel['public'] == 'f') echo 'checked'; ?> >  Femme
+     <input type="radio" name="public" value="mixte" <?php if (isset($produit_actuel['public']) && $produit_actuel['public'] == 'mixte') echo 'checked'; ?> > Mixte<br><br>
 
-
-
-       <input type="file" id="photo" name="photo"><br><br>  
-
-       <!-- couplé avec l'attribut encrtype='multipart/form-data" de la balise <form>, le type 'file permet d'uploader un fichier (ici une photo) -->
+     <label for="photo">Photo</label>
+     <input type="file" id="photo" name="photo"><br><br><!-- coupler avec l'attribut enctype="multipart/form-date" de la balise <form>, le type file permet d'uploader un fichier qui est une photo ici.-->
 
 
+     <!--9-1) Modification de la photo:-->
+     <?php 
+     if(isset($produit_actuel['photo'])){
+         echo '<i>Vous pouvez uploader une nouvelle photo</i><br>';
+        //  Afficher la photo actuelle:
+        echo'<img src="'. $produit_actuel['photo'] .'" width="90" height="90"><br>';
 
+        // Mettre le chemin de la photo dans un champ caché pour l'enregistrer en base:
+        echo '<input type="hidden" name="photo_actuelle" value="'. $produit_actuel['photo'] .'">'; //Ce champ renseigne le $_POST['photo_actuelle'] qui va en base quand on soumet le formulaire de modification. Si on ne remplit pas le formulaire ici, le champ photo de la base est remplacé par un vide, ce qui efface le chemin de la photo. 
+     }
+     ?>
 
+    <label for="prix">prix</label><br>
+    <input type="text" id="prix" name="prix" value="<?php echo $produit_actuel['prix'] ?? 0; ?>"><br><br>
 
-    <label for="prix">Prix</label>
-    <input type="text" id="prix" name="prix" value=""><br><br>
-
-    <label for="stock">Stock</label>
-    <input type="text" id="stock" name="stock" value=""><br><br>
+    <label for="stock">Stock</label><br>
+    <input type="text" id="stock" name="stock" value="<?php echo $produit_actuel['stock'] ?? 0; ?>"><br><br>
 
     <input type="submit" value="valider" class="btn">
+    <!--class="btn": Sert à aligner le bouton avec les champs -->
 
-
-</form>
+</form
 <?php
 endif;
 require_once('../inc/bas.inc.php');

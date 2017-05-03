@@ -20,7 +20,7 @@ define('RACINE_SITE', '/PHP/08_site/'); //indique le dossier dans lequel se situ
 //déclaration des variables d'affichage du site:
 $contenu = '';
 $contenu_gauche = '';
-$contenu_droite='';
+$contenu_droite = '';
 
 //Autre inclusions:
 require_once('fonction.inc.php');
