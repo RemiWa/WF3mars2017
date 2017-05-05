@@ -50,7 +50,7 @@ if (isset($_GET['id_produit'])) { //s'il existe l'indice id_produit dans l'url
         if ($produit['stock'] > 0) {
             //s'il ya du stock, on met le bouton d'ajout au panier
             $contenu.='<form method="post" action="panier.php">';
-                $contenu .= '<input type="hidden" class="form-group-sm form-control-static" name "id_produit" value="'.$produit['id_produit'].'">';
+                $contenu .= '<input type="hidden" class="form-group-sm form-control-static" name="id_produit" value="'.$produit['id_produit'].'">';
 
                 $contenu .= '<select name="quantite" id="quantite">';
 
@@ -75,6 +75,28 @@ if (isset($_GET['id_produit'])) { //s'il existe l'indice id_produit dans l'url
     exit();
 
 };
+
+
+// Affichage d'une fenêtre modale pour confirmer l'ajout du produit au panier
+
+if (isset($_GET['statut_produit']) && $_GET['statut_produit'] == 'ajoute'){
+
+    //On met dans une vbariable le html de la fene^tre modale pour l'afficher ensuite
+    $contenu_gauche = '<div class="modal fade" id="myModal" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Le produit a bien été ajouté au panier</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p><a href="panier.php">Voir le panier</a></p>
+                                        <p><a href="boutique.php"Continuer ses achats</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>';
+
+}
 
 
 //---------------------------------
@@ -116,6 +138,15 @@ echo $contenu_gauche; //recevra le pop-up de confirmation d'ajout au panier'
             </div>
     <?php echo $aside; //affiche les produits suggérés ?>
 </div>
+
+<script>
+    $(document).ready(function(){
+        //affiche la fenêtre modale:
+        $("#myModal").modal("show");
+    });
+</script>
+
+
 
 <?php
 require_once('inc/bas.inc.php');
