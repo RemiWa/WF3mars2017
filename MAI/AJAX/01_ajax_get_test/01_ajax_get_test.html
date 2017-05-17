@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax Get Test</title>
+    <style>
+        div { width: 50%; margin:0 auto;}
+        #demo {border: 1px solid; padding: 30px;}
+        div h1 { color:white ; padding: 20px; background-color: darkred;}
+
+    </style>
+</head>
+
+
+<body>
+    <div id="titre">
+        <h1>Ancien Titre</h1>
+        <button type="button" id="action2">Changer titre</button>
+    </div>
+    <div>
+        <p id="demo">...</p>
+        <button type="button" id="action">Changer texte</button>
+    </div>
+
+    <script>
+
+        /*
+        Les statuts de la reqête XMLHttpRequest
+        0 => Objet crée, demande non initialisée
+        1 => Connexion au serveur établie
+        2 => demande reçue par le serveur
+        3 => traitement côté serveur
+        4 => demande terminée, la répionse est reçue
+        */
+
+
+        /*
+        Les statuts http
+        200 => ok
+        403 => Forbidden
+        404 => page non existnt
+        */
+
+
+
+        //on récupère l'élément qui a l'id action pour mettre en place un évènement exécution d'une fonction lors du clic.
+        document.getElementById("action").addEventListener("click", changeText);
+
+        function changeText() {
+            var xhttp = new XMLHttpRequest (); //instanciation de l'objet XMLHttpRequest
+
+            // Mise en place d'unévênement sur le chanement d'état
+
+            xhttp.onreadystatechange = function() { // à chauqe changement d'état, cette fonction va être exécutée
+                console.log(xhttp.readyState);
+                console.log(xhttp.status);
+
+                if(xhttp.readyState == 4 && xhttp.status == 200) {
+
+                    //Lorsque le status de a requête est à 4 et que le statut http vaut 200, alors:
+                    console.log(xhttp.responseText);
+                    document.getElementById("demo").textContent = xhttp.responseText;
+                }
+
+            }
+            xhttp.open("GET", "ajax_info_text.txt", true); // On prépare la requete True ici signifie que'one st en méthode asynchrone
+            // Premier argument: la methiode: ici GET
+            //Deuxième argument: le gichier cible
+            // troisième argument (facultatif): la méthode synchrone ou asynchrone. Cette valeur vaut TRUE par défaut
+            xhttp.send(); // Méthode d'envoi Ajax
+        }
+
+        document.getElementById("action2").addEventListener("click", changeTitle);
+
+        function changeTitle() {
+            var xhttp = new XMLHttpRequest ();
+
+
+            xhttp.onreadystatechange = function() {
+
+                if(xhttp.readyState == 4 && xhttp.status == 200) {
+
+                    document.getElementById("titre").innerHTML = xhttp.responseText;
+                }
+
+            }
+            xhttp.open("GET", "ajax_info_html.txt", true);
+            xhttp.send();
+        }
+    </script>
+
+</body>
+
+</html>

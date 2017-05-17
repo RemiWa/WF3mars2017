@@ -23,6 +23,7 @@ $query->execute();
 						<th>Téléphone</th>
 						<th>Autres infos</th>
 					</tr>';
+
 while ($restaurants = $query->fetch(PDO::FETCH_ASSOC)){
 
         $contenu .= '<tr>
